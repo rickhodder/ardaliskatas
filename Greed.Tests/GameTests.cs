@@ -88,13 +88,15 @@ namespace Greed.Tests
         }
 
         [Theory]
-        [InlineData(new int[] {1,1,1,5,1}, 1150)]
+        [InlineData(new int[] { 1, 1, 1, 5, 1 }, 1150)]
         [InlineData(new int[] { 2, 3, 4, 6, 2 }, 0)]
-        [InlineData(new int[] { 3, 4, 5, 3, 3 },350)]
+        [InlineData(new int[] { 3, 4, 5, 3, 3 }, 350)]
+        [InlineData(new int[] { 1, 1, 1, 1, 1 }, 1100)]
+        [InlineData(new int[] { 3, 1, 2, 3, 3 }, 400)]
 
         public void TestCases(int[] roll, int score)
         {
-            Assert.Equal(score,game.Score(roll));
+            Assert.Equal(score, game.Score(roll));
         }
 
     }
