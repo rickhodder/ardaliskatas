@@ -59,6 +59,33 @@ namespace Greed.Tests
             Assert.Equal(200, score);
         }
 
+        [Fact]
+        public void ShouldScoreRollTripleThrees_300()
+        {
+            var game = new Game();
+            var roll = new int[] { 3,3,3, 4, 4 };
+            var score = game.Score(roll);
+            Assert.Equal(300, score);
+        }
+
+        [Fact]
+        public void ShouldScoreRollTripleFours_400()
+        {
+            var game = new Game();
+            var roll = new int[] { 3, 3, 4, 4, 4 };
+            var score = game.Score(roll);
+            Assert.Equal(400, score);
+        }
+
+        [Fact]
+        public void ShouldScoreRollTripleFives_550()
+        {
+            var game = new Game();
+            var roll = new int[] { 3, 3, 5, 5, 5 };
+            var score = game.Score(roll);
+            Assert.Equal(550, score);
+        }
+
     }
 
 }

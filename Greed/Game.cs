@@ -16,6 +16,12 @@ namespace Greed
 
             result += ScoreMultiple(2, 3, roll, 200);
 
+            result += ScoreMultiple(3, 3, roll, 300);
+            
+            result += ScoreMultiple(4, 3, roll, 400);
+
+            result += ScoreMultiple(5, 3, roll, 500);
+
             return result;
         }
 
