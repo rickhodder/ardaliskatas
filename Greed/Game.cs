@@ -12,11 +12,9 @@ namespace Greed
 
             result += ScoreSingle(5, roll, 50);
 
-            if (roll.Count(r => r == 1)>=3)
-                result += 1000;
+            result += ScoreMultiple(1, 3, roll, 1000);
 
-            if (roll.Count(r => r == 2) >= 3)
-                result += 200;
+            result += ScoreMultiple(2, 3, roll, 200);
 
             return result;
         }
@@ -28,5 +26,14 @@ namespace Greed
 
             return 0;
         }
+
+        private static int ScoreMultiple(int die, int multiple, int[] roll, int score)
+        {
+            if (roll.Count(r => r == die) >= multiple)
+                return score;
+
+            return 0;
+        }
+
     }
 }
