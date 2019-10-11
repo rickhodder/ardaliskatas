@@ -86,6 +86,15 @@ namespace Greed.Tests
             Assert.Equal(550, score);
         }
 
+        [Fact]
+        public void ShouldScoreRollTripleSixes_600()
+        {
+            var game = new Game();
+            var roll = new int[] { 3, 3, 6, 6, 6 };
+            var score = game.Score(roll);
+            Assert.Equal(600, score);
+        }
+
     }
 
 }
