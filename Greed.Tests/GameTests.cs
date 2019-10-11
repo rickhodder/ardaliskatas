@@ -22,6 +22,16 @@ namespace Greed.Tests
             var score = game.Score(roll);
             Assert.Equal(50, score);
         }
+
+        [Fact]
+        public void ShouldScoreRollWithoutOneOrFive_0()
+        {
+            var game = new Game();
+            var roll = new int[] { 2, 2, 3, 4, 4 };
+            var score = game.Score(roll);
+            Assert.Equal(0, score);
+        }
+
     }
 
 }
