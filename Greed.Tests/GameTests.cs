@@ -87,6 +87,16 @@ namespace Greed.Tests
             Assert.Equal(600, score);
         }
 
+        [Theory]
+        [InlineData(new int[] {1,1,1,5,1}, 1150)]
+        [InlineData(new int[] { 2, 3, 4, 6, 2 }, 0)]
+        [InlineData(new int[] { 3, 4, 5, 3, 3 },350)]
+
+        public void TestCases(int[] roll, int score)
+        {
+            Assert.Equal(score,game.Score(roll));
+        }
+
     }
 
 }
