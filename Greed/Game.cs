@@ -2,7 +2,7 @@
 {
     public class Game
     {
-        public int Score()
+        public int Score(int[] roll)
         {
             return 0;
         }

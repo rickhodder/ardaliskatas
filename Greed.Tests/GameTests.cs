@@ -9,7 +9,8 @@ namespace Greed.Tests
         public void ShouldScoreDiceRoll()
         {
             var game = new Game();
-            var score = game.Score();
+            var roll = new int[] {1, 2, 3, 4, 4};
+            var score = game.Score(roll);
             Assert.Equal(0, score);
         }
     }
