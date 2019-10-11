@@ -32,6 +32,16 @@ namespace Greed.Tests
             Assert.Equal(0, score);
         }
 
+        [Fact]
+        public void ShouldScoreRollWithOneAndFive_150()
+        {
+            var game = new Game();
+            var roll = new int[] { 1, 2, 3, 4, 5 };
+            var score = game.Score(roll);
+            Assert.Equal(150, score);
+        }
+
+
     }
 
 }

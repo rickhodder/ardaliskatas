@@ -6,13 +6,15 @@ namespace Greed
     {
         public int Score(int[] roll)
         {
+            var result = 0;
+
             if (roll.Any(r => r == 1))
-                return 100;
+                result+= 100;
 
             if (roll.Any(r => r == 5))
-                return 50;
+                result+= 50;
 
-            return 0;
+            return result;
         }
     }
 }
