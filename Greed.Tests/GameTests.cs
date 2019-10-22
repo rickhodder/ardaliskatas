@@ -93,8 +93,6 @@ namespace Greed.Tests
         [InlineData(new int[] { 3, 4, 5, 3, 3 }, 350)]
         [InlineData(new int[] { 1, 1, 1, 1, 1 }, 1100)]
         [InlineData(new int[] { 3, 1, 2, 3, 3 }, 400)]
-
-        // 
         public void TestCases(int[] dice, int score)
         {
             // had to do this because inlinedata doesnt take classes
